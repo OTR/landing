@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 class LandingAppConfig(AppConfig):
-    name = "landing_app"
+    name = "landing_app.infra"
 
 """
 from importlib import import_module
