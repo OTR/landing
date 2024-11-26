@@ -30,7 +30,6 @@ jobs:
           ssh -o StrictHostKeyChecking=no $VDS_USER@$VDS_IP << 'EOF'
             mkdir -p /home/bot/landing
             cd /home/bot/landing
-            ls ../
             if [ ! -d ".git" ]; then
               git clone git@github.com:BaseOfBot/landing.git .
             else
