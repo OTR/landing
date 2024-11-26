@@ -1,8 +1,8 @@
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-SECRET_KEY = 'django-insecure-^8438bx7v@eas6)444@9qz$$h$8qcofg04ax9t=ihn5cc&)c3@'
-DEBUG = True
+SECRET_KEY = 'django-insecure--------------------------change-me'
+DEBUG = False
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
@@ -73,7 +73,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 STATIC_ROOT = BASE_DIR / "static"
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 __version__ = "0.0.1"
