@@ -2,7 +2,7 @@ FROM python:3.11-alpine
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    DJANGO_SETTINGS_MODULE=config.settings.local_settings
+    DJANGO_SETTINGS_MODULE=config.settings.local
 
 WORKDIR /app
 

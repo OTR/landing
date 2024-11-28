@@ -1,5 +1,8 @@
-from django.views.generic import TemplateView
+from django.conf import settings
+from django.http import HttpResponse
 
-
-class IndexView(TemplateView):
-    template_name = "landing_app/index.html"
+def serve_html_file(request):
+    path = str(settings.BASE_DIR / "static" / "index.html")
+    with open(path, "r", encoding="utf-8") as f:
+        html_content = f.read()
+    return HttpResponse(html_content, content_type="text/html")

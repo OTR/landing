@@ -9,4 +9,4 @@ urlpatterns = [
     path("", include("landing_app.urls", namespace="landing_app")),
 ]
 
-urlpatterns +=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
