@@ -2,9 +2,9 @@ import os
 import sys
 
 
-def main():
+def main(path_to_settings: str):
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.postgres_settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', path_to_settings)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -17,4 +17,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    path_to_settings = os.environ.get(
+	    "DJANGO_SETTINGS_MODULE", "config.settings.local"
+    )
+    main(path_to_settings)

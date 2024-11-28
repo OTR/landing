@@ -72,8 +72,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
-STATIC_ROOT = BASE_DIR / "static"
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [str(BASE_DIR / "static")]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 __version__ = "0.0.1"
