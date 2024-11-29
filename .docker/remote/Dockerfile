@@ -32,6 +32,5 @@ COPY ../../ /app
 COPY ./prod.env /app/prod.env
 ENV $(cat /app/prod.env | xargs)
 
-EXPOSE 8000
 
-CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]
+EXPOSE 8000
