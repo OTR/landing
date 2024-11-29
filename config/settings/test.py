@@ -1,3 +1,5 @@
+import os
+
 from dotenv import load_dotenv
 
 from config.settings.base import *
@@ -7,5 +9,7 @@ load_dotenv(PATH_TO_ENVIRONMENT_VARIABLES)
 
 DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0"]
+SOCIAL_AUTH_TELEGRAM_BOT_TOKEN = os.getenv('SOCIAL_AUTH_TELEGRAM_BOT_TOKEN')
+
 TIME_ZONE = "Etc/GMT-3"
 STATIC_ROOT = str(BASE_DIR / "staticfiles")
