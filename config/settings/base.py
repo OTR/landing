@@ -14,7 +14,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    "corsheaders",
     'oauth2_provider',
     'social_django',
     'drf_social_oauth2',
@@ -25,7 +24,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -81,7 +80,7 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [str(BASE_DIR / "static")]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -103,8 +102,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend'
 )
 
-LOGIN_REDIRECT_URL = '/login2'
-SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
+LOGIN_REDIRECT_URL = '/login'
+# SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 # CSP Polices
 
 __version__ = "0.0.1"
