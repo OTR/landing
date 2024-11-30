@@ -102,7 +102,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend'
 )
 
-LOGIN_REDIRECT_URL = '/login'
+LOGIN_REDIRECT_URL = ''
 # SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 # CSP Polices
 

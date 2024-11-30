@@ -1,3 +1,4 @@
+# TODO: fix collect static for django admin site
 services:
   web:
     build:
