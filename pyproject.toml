@@ -15,11 +15,13 @@ python-dotenv = "1.0.1"
 google-api-python-client = "2.141.0"
 pytz = "2024.1"
 djangorestframework = "3.15.2"
-pytest = "8.3.2" # TODO
 aiogram = "3.15.0"
 gunicorn = "23.0.0" # TODO
 django-cors-headers = "4.6.0"
 drf-social-oauth2 = "3.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "8.3.2"
 
 [build-system]
 requires = ["poetry-core"]
