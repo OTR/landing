@@ -2,7 +2,7 @@
 name = "landing"
 version = "0.0.1"
 description = "Landing for baseofbot.com site"
-authors = ["<OTR@github.com>"]
+authors = ["Andrew Popkov <OTR@github.com>"]
 license = "Apache 2.0"
 readme = "README.md"
 
