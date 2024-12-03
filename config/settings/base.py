@@ -117,9 +117,10 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'DEBUG',
         },
-        '': {  # Root logger
+        'django.utils.autoreload': {
             'handlers': ['console'],
-            'level': 'DEBUG',
+            'level': 'WARNING',  # Raise the level to WARNING or higher to suppress DEBUG logs
+            'propagate': False,
         },
     },
 }
