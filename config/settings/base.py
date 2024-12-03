@@ -117,6 +117,10 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'DEBUG',
         },
+        '': {  # Root logger
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
     },
 }
 
