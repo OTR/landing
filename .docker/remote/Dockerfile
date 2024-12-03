@@ -20,10 +20,9 @@ RUN apk add --no-cache --virtual .build-deps \
 RUN pip install --no-cache-dir poetry
 
 COPY ../../pyproject.toml /app/
-COPY ../../poetry.lock /app/
 
 RUN poetry config virtualenvs.create false && \
-     poetry install --no-dev --no-interaction --no-ansi
+     poetry install --only main --no-interaction --no-ansi
 
 RUN apk del .build-deps
 

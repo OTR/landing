@@ -2,22 +2,26 @@
 name = "landing"
 version = "0.0.1"
 description = "Landing for baseofbot.com site"
-authors = ["<OTR@github.com>"]
+authors = ["Andrew Popkov <OTR@github.com>"]
 license = "Apache 2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-requests = "2.32.3"
+requests = "2.32.3" # TODO
 django = "5.1.0"
 celery = "5.4.0"
 python-dotenv = "1.0.1"
 google-api-python-client = "2.141.0"
 pytz = "2024.1"
 djangorestframework = "3.15.2"
-pytest = "8.3.2"
 aiogram = "3.15.0"
-gunicorn = "23.0.0"
+gunicorn = "23.0.0" # TODO
+django-cors-headers = "4.6.0"
+drf-social-oauth2 = "3.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "8.3.2"
 
 [build-system]
 requires = ["poetry-core"]
