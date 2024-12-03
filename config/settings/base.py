@@ -96,7 +96,36 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend'
 )
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'django.security': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
+
 LOGIN_REDIRECT_URL = '/profile'
 # CSP Polices
+# SECURE_PROXY_SSL_HEADER = None
+# CSRF_COOKIE_SECURE = False
+# SESSION_COOKIE_SECURE = False
+# SESSION_COOKIE_DOMAIN = None
+# SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 __version__ = "0.0.1"
