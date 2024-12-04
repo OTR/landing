@@ -117,6 +117,11 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'DEBUG',
         },
+        'django.utils.autoreload': {
+            'handlers': ['console'],
+            'level': 'WARNING',  # Raise the level to WARNING or higher to suppress DEBUG logs
+            'propagate': False,
+        },
     },
 }
 

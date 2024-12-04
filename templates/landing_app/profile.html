@@ -1,0 +1,20 @@
+{% if SOCIAL_AUTH_PROVIDER|default:"" %}
+  <h1>Social Authentication Details</h1>
+  <ul>
+    <li><strong>Provider:</strong> {{ SOCIAL_AUTH_PROVIDER }}</li>
+    <li><strong>Social Auth ID:</strong> {{ SOCIAL_AUTH_ID }}</li>
+    <li><strong>First Name:</strong> {{ SOCIAL_AUTH_FIRST_NAME }}</li>
+    {% if SOCIAL_AUTH_USERNAME %}
+      <li><strong>Username:</strong> {{ SOCIAL_AUTH_USERNAME }}</li>
+    {% else %}
+      <li><strong>Username:</strong> Not provided</li>
+    {% endif %}
+  </ul>
+{% else %}
+  {% if DJANGO_USER|default:"" %}
+    <h1>Authentication Details</h1>
+    <p>Currently you are logged as regular user (without social account) as: {{ DJANGO_USER }}</p>
+  {% else %}
+    <p>No social authentication data is available.</p>
+  {% endif %}
+{% endif %}

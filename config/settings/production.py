@@ -1,6 +1,7 @@
 import os
 
 from dotenv import load_dotenv
+import sentry_sdk
 
 from config.settings.base import *
 
@@ -19,3 +20,22 @@ CSRF_TRUSTED_ORIGINS = [
     'https://' + ALLOWED_HOSTS[0],
     'http://' + ALLOWED_HOSTS[0]
 ]
+
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'config.social_auth_pipelines.log_associated_user',  # Custom step
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+)
+
+SENTRY_DSN = os.getenv("SENTRY_DSN")
+
+sentry_sdk.init(
+    dsn=SENTRY_DSN,
+    traces_sample_rate=1.0,
+    _experiments={"continuous_profiling_auto_start": True},
+)
