@@ -20,6 +20,7 @@ parts/
 sdist/
 var/
 tests/
+landing_app/tests/
 wheels/
 share/python-wheels/
 *.egg-info/

@@ -20,6 +20,7 @@ gunicorn = "23.0.0" # TODO
 django-cors-headers = "4.6.0"
 drf-social-oauth2 = "3.1.0"
 sentry-sdk = {extras = ["django"], version = "2.19.0"}
+django-celery-beat = "2.7.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "8.3.2"
