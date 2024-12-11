@@ -9,6 +9,14 @@ from domain.vo.payment_status import PaymentStatus
 
 @dataclass
 class Invoice:
+    """
+    invoice_id: int
+    user: User
+    product: Product
+    issued_at: datetime
+    status: PaymentStatus = PaymentStatus.PENDING
+    payment_date: Optional[datetime] = None
+    """
     invoice_id: int
     user: User
     product: Product
