@@ -3,7 +3,7 @@ from enum import Enum
 
 class PaymentStatus(Enum):
     PENDING = 'Pending'
-    SUCCESS = 'Success'
+    PAID = 'Paid'
     FAILED = 'Failed'
 
     @classmethod
