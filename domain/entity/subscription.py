@@ -8,8 +8,17 @@ from domain.vo.subscription_status import SubscriptionStatus
 
 
 class Subscription(BaseModel):
-    subscription_id: int = Field(..., gt=0,
-                                 description="The ID of the subscription (must be positive).")
+    """
+    subscription_id: int
+    user: User
+    product: Product
+    start_date: datetime
+    end_date: datetime
+    status: SubscriptionStatus = SubscriptionStatus.ACTIVE
+    """
+    subscription_id: int = Field(
+        ..., gt=0, description="The ID of the subscription (must be positive)."
+    )
     user: User
     product: Product
     start_date: datetime

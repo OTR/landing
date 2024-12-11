@@ -8,6 +8,15 @@ from domain.vo.payment_status import PaymentStatus
 
 @dataclass
 class Payment:
+    """
+    payment_id: int
+    invoice: Invoice
+    amount: int
+    payment_method: PaymentMethod
+    status: PaymentStatus
+    payment_date: datetime
+    retry_count: int = field(default=0)
+    """
     payment_id: int
     invoice: Invoice
     amount: int

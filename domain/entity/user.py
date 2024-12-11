@@ -5,6 +5,12 @@ from typing import Optional
 
 @dataclass
 class User:
+    """
+    user_id: int
+    username: str
+    join_date: datetime
+    full_name: Optional[str] = None
+    """
     user_id: int
     username: str
     join_date: datetime

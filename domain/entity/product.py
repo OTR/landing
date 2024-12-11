@@ -6,6 +6,16 @@ from domain.vo.recurring_period import RecurringPeriod
 
 @dataclass
 class Product:
+    """
+    product_id: int
+    name: str
+    description: str
+    base_price: int
+    currency: Currency
+    is_recurring: bool
+    recurring_period: RecurringPeriod
+    is_available: bool = True
+    """
     product_id: int
     name: str
     description: str

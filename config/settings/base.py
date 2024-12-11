@@ -15,7 +15,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    'landing_app',
+    'landing_app.apps.LandingAppConfig',
 
     'oauth2_provider',
     'social_django',
